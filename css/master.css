@@ -1,0 +1,101 @@
+/*
+Portions of this CSS file are largely inspired by the baseline css framework.
+ I take a lot of what was there and cleaned it up and consiladated to better serve my needs. 
+
+Baseline - a designer framework
+Copyright (C) 2009 Stephane Curzi, ProjetUrbain.com
+Creative Commons Attribution-Share Alike 3.0 License
+*/
+
+/* ******************* Base ******************* */
+body { 
+  font-family: helvetica, arial, sans-serif; 
+  background: white; 
+  color: black;
+  font-size: 75%; 
+}
+h1, h2, h3, h4, h5, h6	{ line-height: 1.2; position: relative; clear:left}
+h1, h2								  { line-height: 36px; margin-bottom: 18px; }
+h1, h2, h3, h4					{ margin-top: 18px; }
+h4, h5, h6							{ font-weight: bold; }
+h3, h4, h5, h6					{ line-height: 18px; }
+h1									    { font-size: 46px; }
+h2									    { font-size: 34px; }
+h3									    { font-size: 26px; }
+h4									    { font-size: 20px; }
+h5									    { font-size: 15px; }
+h6									    { font-size: 13px; }
+h1:first-child, h2:first-child, h3:first-child, h4:first-child						{ margin-top: 0; }
+
+
+b, strong, th, thead, dt, legend				{ font-weight: bold; }
+caption, cite, dfn, em, i			          { font-style: italic; }
+code, kbd, samp, pre, tt, var	          { font-family: mono-space, monospace; }
+
+p, pre, address						              { font-size: 14px; line-height: 1.5em; }
+p	                                      { word-spacing: 0.125em; hyphenate: auto; hyphenate-lines: 3; margin:.5em 0 1.5em}
+
+blockquote								              { padding: 1.5em; }
+blockquote:before, blockquote:after, q:before, q:after		{ content: ""; }
+blockquote, q												    { quotes: "" ""; }
+
+
+
+/* @group Links */
+/*a {
+  display:inline-block;
+	text-decoration:none;
+	padding:1px 2px 0;
+	margin:-1px 0;
+}
+a:link, a:visited {
+  color: #411;
+  border-bottom:2px solid rgba(68,17,17,.1);
+}
+h2 a:link, h3 a:link, h2 a:visited, h3 a:visited {
+	text-transform: none;
+	color:#222;
+	border-bottom-color:rgba(67,17,17,0)
+}
+a:hover {
+  border-bottom:2px solid #411;
+  color:#222;
+}
+h2 a:hover, h3 a:hover {color:#222;border-bottom:2px solid #411;}
+
+
+
+*/
+/* @end */
+
+/* ******************* DRUPAL ADMIN ******************* */
+.block-region {background:#ffe; border:2px dashed #ccc}
+.region {font-weight:700;}
+
+
+table tr.error  {background:#fdd;}
+table tr.warning {background:#ffd;}
+table tr.ok {background:#dfd;}
+
+/* ******************* Drupal Forms ******************* */
+.fieldset {
+  margin:1.5em 0;
+  padding:.5em 1em;
+  background:rgba(0,0,0,.02);
+  -moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
+  .fieldset:hover {background:rgba(0,0,0,.04);}
+  .fieldset-title {font-size:18px; margin:0;}
+
+.form-text {}
+  #edit-title {font-size:2em; width:100%}
+
+.form-submit {
+  display:inline-block;
+  padding:3px 8px;
+  background:#eee;
+  border:1px solid #ddd;
+  -moz-border-radius:4px;
+	-webkit-border-radius:4px;
+}
