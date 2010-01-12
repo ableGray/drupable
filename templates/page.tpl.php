@@ -15,14 +15,16 @@
       <?php if ($show_messages && $messages): print $messages; endif; ?>
     </div></div>
   <?php endif; ?>
-
+  
+  <?php if ($eyebrow): ?>
+    <div id="eyebrow"><div class='limiter clear-block'> <?php print $eyebrow; ?> </div></div>
+  <?php endif; ?>
   
   <div id='header'><div class='limiter clear-block'>
     <?php if ($site_name): ?><h1 class='site-name'><?php print $site_name ?></h1><?php endif; ?>
     <?php if ($search_box): ?><div class="block block-theme"><?php print $search_box ?></div><?php endif; ?>
-    
     <?php if ($header): ?>
-      <div class="region-header"> <?php print $header; ?> </div>
+      <?php print $header; ?>
     <?php endif; ?>
   </div></div>
   
@@ -35,8 +37,14 @@
     <?php endif; ?>
   </div></div>
 
-  <div id='page'><div class='limiter clear-block'>
+  <?php if ($featured): ?>
+  <div id='featured'><div class='limiter clear-block'>
+    <?php print $featured ?>
+  </div></div>
+  <?php endif; ?>
 
+  <div id='page'><div class='limiter clear-block'>
+        
     <?php if ($left): ?>
       <div id='left' class='clear-block'><?php print $left ?></div>
     <?php endif; ?>
@@ -55,7 +63,7 @@
         <?php if ($title): ?><h2 class='page-title'><?php print $title ?></h2><?php endif; ?>
         <div id='content' class='clear-block'>
           <?php if ($content_top)  print $content_top; ?>
-          <?php print $content ?>
+          <?php if ($content) print $content ?>
           <?php if ($content_bottom)  print $content_bottom; ?>
         </div>
     </div>
