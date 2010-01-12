@@ -10,6 +10,15 @@ Drupal.behaviors.drupable = function (context) {
   //  $(this).hide()
   //})
   
+  $("#main:has(#tabs)").hover(
+    function () {
+      $(this).find("#tabs").fadeIn(400)
+    },
+    function () {
+      $(this).find("#tabs").fadeOut(400)
+    }
+  );
+  
   
   $('div.fieldset:not(.tao-processed)').each(function() {
     $(this).addClass('tao-processed');
@@ -20,15 +29,6 @@ Drupal.behaviors.drupable = function (context) {
       // Note that .children() only returns the immediate ancestors rather than
       // recursing down all children.
       $(this).children('.fieldset-title').click(function() {
-        //if ($(this).parent().is('.collapsed')) {
-        //  $(this).siblings('.fieldset-content').show();
-        //  $(this).parent().removeClass('collapsed');
-        //}
-        //else {
-        //  $(this).siblings('.fieldset-content').hide();
-        //  $(this).parent().addClass('collapsed');
-        //}
-        
         $(this).siblings('.fieldset-content').slideToggle('fast');
         $(this).parent().toggleClass('collapsed');
         
